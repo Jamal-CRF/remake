@@ -1,0 +1,568 @@
+/* Variáveis CSS */
+:root {
+    --primary-color: #ebe7e6;
+    --secondary-color: #fffcfc;
+    --text-color: #333;
+    --white: #ffffff;
+    --accent-color: #ff69b4;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: var(--secondary-color);
+}
+
+/* Header */
+.site-header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+    max-height: 80px;
+    width: auto;
+}
+
+/* Hero Section */
+.hero-section {
+    margin-top: 102px; /* altura do header + padding */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 102px);
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.hero-section .container {
+    padding: 0 1rem;
+}
+
+.hero-section h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    max-width: 100%;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.btn-primary:hover {
+    background-color: #d4d0cf;
+    border-color: #d4d0cf;
+    transform: translateY(-2px);
+}
+
+/* Cards de Benefícios */
+.benefit-card {
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background: var(--primary-color);
+    height: 100%;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card i {
+    color: var(--primary-color);
+}
+
+/* Depoimentos */
+.testimonial-card {
+    background: var(--primary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.stars {
+    color: #ffd700;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    margin-top: 0 !important;
+    padding: 2rem 0;
+}
+
+.footer a {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.footer a:hover {
+    color: #666;
+}
+
+.footer .contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.footer .contact-info i {
+    width: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* O que é Section */
+.what-is-section {
+    background-color: var(--secondary-color);
+    padding: 4rem 0;
+}
+
+.what-is-section h2 {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.what-is-content {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.what-is-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.what-is-content strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.what-is-image {
+    margin-top: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.what-is-image img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.what-is-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Como é realizada Section */
+.how-is-done-section {
+    background-color: var(--primary-color);
+    padding: 4rem 0;
+}
+
+.how-is-done-content {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.how-is-done-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.how-is-done-content strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Indicação Section */
+.indication-section {
+    background-color: var(--secondary-color);
+    padding: 4rem 0;
+}
+
+.indication-content {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.indication-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.indication-content strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Outros Procedimentos Section */
+.procedures-section {
+    background-color: var(--secondary-color);
+}
+
+.procedures-section .benefit-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: none;
+    transform: none;
+}
+
+.procedures-section .benefit-card:hover {
+    transform: none;
+}
+
+.procedures-section .benefit-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.procedures-section .benefit-card h3 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.procedures-section .benefit-card p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Estilos para textos em destaque */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--accent-color);
+}
+
+.what-is-content strong,
+.how-is-done-content strong,
+.indication-content strong,
+.procedures-section .benefit-card h3,
+.testimonial-author {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.hero-section h1,
+.hero-section h2 {
+    color: var(--white);
+}
+
+.hero-section p {
+    color: var(--white);
+}
+
+.cta-section h2 {
+    color: var(--accent-color);
+}
+
+.footer h5 {
+    color: var(--accent-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-logo {
+        max-height: 60px;
+    }
+
+    .hero-section {
+        margin-top: 82px;
+        min-height: calc(100vh - 82px);
+    }
+
+    .hero-section .container {
+        padding: 0 1rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-section p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        padding: 0;
+    }
+
+    .benefit-card, .testimonial-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .what-is-section {
+        padding: 3rem 0;
+    }
+
+    .what-is-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .what-is-content {
+        padding: 1.5rem;
+    }
+
+    .what-is-content p {
+        font-size: 1.1rem;
+    }
+
+    .what-is-image {
+        max-width: 100%;
+    }
+
+    .how-is-done-section {
+        padding: 3rem 0;
+    }
+
+    .how-is-done-content {
+        padding: 1.5rem;
+    }
+
+    .how-is-done-content p {
+        font-size: 1.1rem;
+    }
+
+    .indication-section {
+        padding: 3rem 0;
+    }
+
+    .indication-content {
+        padding: 1.5rem;
+    }
+
+    .indication-content p {
+        font-size: 1.1rem;
+    }
+
+    .footer {
+        padding: 1.5rem 0;
+    }
+    
+    .footer .container {
+        padding: 0 1rem;
+    }
+    
+    .footer h5 {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .footer .contact-info {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer .row {
+        margin: 0;
+    }
+
+    .footer .col-12 {
+        padding: 0;
+    }
+
+    .procedures-section .benefit-card img {
+        height: 200px;
+    }
+    
+    .procedures-section .benefit-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-logo {
+        max-height: 50px;
+    }
+
+    .hero-section {
+        margin-top: 72px;
+        min-height: calc(100vh - 72px);
+    }
+
+    .hero-section .container {
+        padding: 0 0.75rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+        margin-bottom: 1.25rem;
+        padding: 0;
+    }
+
+    .btn-lg {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    .what-is-section {
+        padding: 2rem 0;
+    }
+
+    .what-is-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .what-is-content {
+        padding: 1rem;
+    }
+
+    .what-is-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .what-is-image {
+        margin-top: 1rem;
+    }
+
+    .how-is-done-section {
+        padding: 2rem 0;
+    }
+
+    .how-is-done-content {
+        padding: 1rem;
+    }
+
+    .how-is-done-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .indication-section {
+        padding: 2rem 0;
+    }
+
+    .indication-content {
+        padding: 1rem;
+    }
+
+    .indication-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .procedures-section .benefit-card img {
+        height: 200px;
+    }
+    
+    .procedures-section .benefit-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section, .benefit-card, .testimonial-card {
+    animation: fadeIn 1s ease-out;
+} 
