@@ -1,10 +1,10 @@
 /* Variáveis CSS */
 :root {
-    --primary-color: #ebe7e6;
+    --primary-color: #EBE7E6;
     --secondary-color: #fffcfc;
     --text-color: #333;
     --white: #ffffff;
-    --accent-color: #ff69b4;
+    --accent-color: #7e572a;
 }
 
 /* Estilos Gerais */
@@ -35,18 +35,9 @@ body {
 
 /* Hero Section */
 .hero-section {
-    margin-top: 102px; /* altura do header + padding */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-    background-size: cover;
-    background-position: center;
-    min-height: calc(100vh - 102px);
-    display: flex;
-    align-items: center;
-    padding: 2rem 0;
-}
-
-.hero-section .container {
-    padding: 0 1rem;
+    margin-top: 102px;
+    padding: 3rem 0;
+    background-color: var(--primary-color);
 }
 
 .hero-section h2 {
@@ -54,26 +45,59 @@ body {
     font-weight: 500;
     letter-spacing: 1px;
     margin-bottom: 0.5rem;
+    color: var(--accent-color);
 }
 
 .hero-section h1 {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     line-height: 1.2;
+    color: var(--accent-color);
 }
 
 .hero-section p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     line-height: 1.8;
-    max-width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+    text-align: justify;
+    color: var(--text-color);
+}
+
+.hero-section p strong {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.hero-section .container {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto 3rem;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section .btn {
+    margin-top: 2rem;
 }
 
 /* Botões */
 .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--white);
     padding: 12px 30px;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -82,8 +106,8 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #d4d0cf;
-    border-color: #d4d0cf;
+    background-color: #6a4833;
+    border-color: #6a4833;
     transform: translateY(-2px);
 }
 
@@ -102,7 +126,7 @@ body {
 }
 
 .benefit-card i {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 /* Depoimentos */
@@ -121,11 +145,12 @@ body {
 .testimonial-text {
     font-style: italic;
     margin-bottom: 1rem;
+    text-align: justify;
 }
 
 .testimonial-author {
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 /* CTA Section */
@@ -144,24 +169,39 @@ body {
     padding: 2rem 0;
 }
 
+.footer .container {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer h5 {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
 .footer a {
     color: var(--text-color);
     transition: color 0.3s ease;
     display: inline-block;
     margin-bottom: 0.5rem;
+    text-decoration: none;
 }
 
 .footer a:hover {
-    color: #666;
+    color: var(--accent-color);
 }
 
 .footer .contact-info p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .footer .contact-info i {
     width: 20px;
     text-align: center;
+    color: var(--accent-color);
 }
 
 .social-links a {
@@ -182,7 +222,7 @@ body {
 }
 
 .what-is-section h2 {
-    color: var(--text-color);
+    color: var(--accent-color);
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 2rem;
@@ -200,10 +240,11 @@ body {
     line-height: 1.8;
     color: var(--text-color);
     margin: 0;
+    text-align: justify;
 }
 
 .what-is-content strong {
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-weight: 700;
 }
 
@@ -243,10 +284,11 @@ body {
     line-height: 1.8;
     color: var(--text-color);
     margin: 0;
+    text-align: justify;
 }
 
 .how-is-done-content strong {
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-weight: 700;
 }
 
@@ -268,49 +310,54 @@ body {
     line-height: 1.8;
     color: var(--text-color);
     margin: 0;
+    text-align: justify;
 }
 
 .indication-content strong {
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-weight: 700;
 }
 
 /* Outros Procedimentos Section */
 .procedures-section {
-    background-color: var(--secondary-color);
+    padding: 4rem 0;
+    background-color: var(--primary-color);
+}
+
+.procedures-section h2 {
+    color: var(--accent-color);
 }
 
 .procedures-section .benefit-card {
+    background: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    transition: none;
-    transform: none;
-}
-
-.procedures-section .benefit-card:hover {
-    transform: none;
+    overflow: hidden;
 }
 
 .procedures-section .benefit-card img {
     width: 100%;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+    object-position: center;
+    border-radius: 8px;
+    display: block;
 }
 
 .procedures-section .benefit-card h3 {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    color: var(--accent-color);
 }
 
 .procedures-section .benefit-card p {
-    color: var(--text-color);
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 0;
+    color: var(--text-color);
+    margin: 0;
+    text-align: justify;
 }
 
 /* Estilos para textos em destaque */
@@ -329,18 +376,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-section h1,
 .hero-section h2 {
-    color: var(--white);
-}
-
-.hero-section p {
-    color: var(--white);
-}
-
-.cta-section h2 {
     color: var(--accent-color);
 }
 
-.footer h5 {
+.hero-section p {
+    color: var(--text-color);
+}
+
+.cta-section h2 {
     color: var(--accent-color);
 }
 
@@ -352,76 +395,43 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero-section {
         margin-top: 82px;
-        min-height: calc(100vh - 82px);
-    }
-
-    .hero-section .container {
-        padding: 0 1rem;
+        padding: 2rem 0;
     }
 
     .hero-section h2 {
         font-size: 1.5rem;
-        margin-bottom: 0.5rem;
     }
 
     .hero-section h1 {
         font-size: 2.5rem;
-        margin-bottom: 1rem;
     }
 
     .hero-section p {
         font-size: 1.1rem;
-        margin-bottom: 1.5rem;
-        padding: 0;
+        padding: 0 1.5rem;
     }
 
-    .benefit-card, .testimonial-card {
-        margin-bottom: 1.5rem;
+    .hero-image {
+        margin-bottom: 2rem;
     }
 
-    .what-is-section {
-        padding: 3rem 0;
-    }
-
-    .what-is-section h2 {
+    .what-is-section h2,
+    .how-is-done-section h2,
+    .indication-section h2,
+    .procedures-section h2 {
         font-size: 2rem;
-        margin-bottom: 1.5rem;
     }
 
-    .what-is-content {
-        padding: 1.5rem;
-    }
-
-    .what-is-content p {
-        font-size: 1.1rem;
-    }
-
-    .what-is-image {
-        max-width: 100%;
-    }
-
-    .how-is-done-section {
-        padding: 3rem 0;
-    }
-
-    .how-is-done-content {
-        padding: 1.5rem;
-    }
-
-    .how-is-done-content p {
-        font-size: 1.1rem;
-    }
-
-    .indication-section {
-        padding: 3rem 0;
-    }
-
-    .indication-content {
-        padding: 1.5rem;
-    }
-
+    .what-is-content p,
+    .how-is-done-content p,
     .indication-content p {
         font-size: 1.1rem;
+        text-align: justify;
+    }
+
+    .procedures-section .benefit-card p {
+        font-size: 0.95rem;
+        text-align: justify;
     }
 
     .footer {
@@ -429,32 +439,50 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .footer .container {
-        padding: 0 1rem;
+        padding: 1.5rem;
     }
     
     .footer h5 {
         margin-bottom: 1rem;
-        margin-top: 1rem;
+        text-align: center;
     }
     
     .footer .contact-info {
-        margin-bottom: 1.5rem;
+        text-align: center;
+        margin-bottom: 2rem;
     }
 
-    .footer .row {
-        margin: 0;
+    .footer .contact-info p {
+        margin-bottom: 0.75rem;
     }
 
     .footer .col-12 {
         padding: 0;
     }
 
+    .procedures-section .benefit-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
     .procedures-section .benefit-card img {
-        height: 200px;
+        height: 180px;
+        object-fit: cover;
+        object-position: center;
     }
     
     .procedures-section .benefit-card h3 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        margin: 0.75rem 0;
+    }
+    
+    .procedures-section .benefit-card p {
+        font-size: 0.95rem;
+    }
+
+    .doctor-image img {
+        max-width: 300px;
     }
 }
 
@@ -465,27 +493,24 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero-section {
         margin-top: 72px;
-        min-height: calc(100vh - 72px);
-    }
-
-    .hero-section .container {
-        padding: 0 0.75rem;
+        padding: 1.5rem 0;
     }
 
     .hero-section h2 {
         font-size: 1.3rem;
-        margin-bottom: 0.5rem;
     }
 
     .hero-section h1 {
         font-size: 2rem;
-        margin-bottom: 0.75rem;
     }
 
     .hero-section p {
         font-size: 1rem;
-        margin-bottom: 1.25rem;
-        padding: 0;
+        padding: 0 1rem;
+    }
+
+    .hero-image {
+        margin-bottom: 1.5rem;
     }
 
     .btn-lg {
@@ -494,60 +519,45 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1rem;
     }
 
-    .what-is-section {
-        padding: 2rem 0;
-    }
-
-    .what-is-section h2 {
+    .what-is-section h2,
+    .how-is-done-section h2,
+    .indication-section h2,
+    .procedures-section h2 {
         font-size: 1.8rem;
-        margin-bottom: 1rem;
     }
 
-    .what-is-content {
-        padding: 1rem;
-    }
-
-    .what-is-content p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .what-is-image {
-        margin-top: 1rem;
-    }
-
-    .how-is-done-section {
-        padding: 2rem 0;
-    }
-
-    .how-is-done-content {
-        padding: 1rem;
-    }
-
-    .how-is-done-content p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .indication-section {
-        padding: 2rem 0;
-    }
-
-    .indication-content {
-        padding: 1rem;
-    }
-
+    .what-is-content p,
+    .how-is-done-content p,
     .indication-content p {
         font-size: 1rem;
-        line-height: 1.6;
+        text-align: justify;
     }
 
-    .procedures-section .benefit-card img {
-        height: 200px;
+    .procedures-section .benefit-card {
+        padding: 0.75rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
     
-    .procedures-section .benefit-card h3 {
-        font-size: 1.3rem;
+    .procedures-section .benefit-card img {
+        height: 160px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .doctor-image img {
+        max-width: 250px;
+    }
+
+    .footer .container {
+        padding: 1rem;
+    }
+
+    .footer h5 {
+        font-size: 1.2rem;
+    }
+
+    .footer .contact-info p {
+        font-size: 0.95rem;
     }
 }
 
@@ -565,4 +575,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-section, .benefit-card, .testimonial-card {
     animation: fadeIn 1s ease-out;
+}
+
+.doctor-image {
+    margin-bottom: 2rem;
+}
+
+.doctor-image img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 } 
