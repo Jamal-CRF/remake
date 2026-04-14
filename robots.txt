@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drakanandagaldino.com.br/sitemap.xml
