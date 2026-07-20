@@ -36,8 +36,22 @@ body {
 /* Hero Section */
 .hero-section {
     margin-top: 102px;
-    padding: 3rem 0;
+    padding: 3.5rem 0;
     background-color: var(--primary-color);
+}
+
+.hero-copy {
+    text-align: left;
+}
+
+.hero-kicker {
+    display: inline-block;
+    color: var(--accent-color);
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.9rem;
+    text-transform: uppercase;
 }
 
 .hero-section h2 {
@@ -59,11 +73,9 @@ body {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     line-height: 1.8;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 1rem;
-    text-align: justify;
+    max-width: 620px;
+    padding: 0;
+    text-align: left;
     color: var(--text-color);
 }
 
@@ -74,23 +86,57 @@ body {
 
 .hero-section .container {
     background-color: var(--secondary-color);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.hero-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+}
+
+.hero-highlights span {
+    align-items: center;
+    background: rgba(235, 231, 230, 0.75);
+    border: 1px solid rgba(126, 87, 42, 0.14);
+    border-radius: 999px;
+    color: var(--accent-color);
+    display: inline-flex;
+    font-size: 0.92rem;
+    font-weight: 600;
+    gap: 0.45rem;
+    padding: 0.55rem 0.8rem;
+}
+
+.hero-highlights i {
+    font-size: 0.9rem;
+}
+
+.hero-portrait {
+    margin-left: auto;
+    max-width: 520px;
+    position: relative;
+}
+
+.hero-portrait-mobile {
+    display: none;
+}
+
 .hero-image {
     width: 100%;
-    max-width: 1000px;
-    height: auto;
-    margin: 0 auto 3rem;
+    height: min(620px, 65vh);
     display: block;
+    object-fit: cover;
+    object-position: 50% 30%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero-section .btn {
-    margin-top: 2rem;
+    margin-top: 0;
 }
 
 /* Botões */
@@ -550,6 +596,14 @@ h1, h2, h3, h4, h5, h6 {
         padding: 2rem 0;
     }
 
+    .hero-section .container {
+        padding: 1.75rem;
+    }
+
+    .hero-copy {
+        text-align: center;
+    }
+
     .hero-section h2 {
         font-size: 1.5rem;
     }
@@ -558,13 +612,29 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 2.2rem;
     }
 
+    .hero-portrait-desktop {
+        display: none;
+    }
+
+    .hero-portrait-mobile {
+        display: block;
+        margin: 0 auto 1.5rem;
+        max-width: 460px;
+    }
+
     .hero-section p {
         font-size: 1.1rem;
-        padding: 0 1.5rem;
+        padding: 0;
+        text-align: center;
+    }
+
+    .hero-highlights {
+        justify-content: center;
     }
 
     .hero-image {
-        margin-bottom: 2rem;
+        height: 540px;
+        margin-bottom: 0;
     }
 
     .what-is-section h2,
@@ -646,21 +716,49 @@ h1, h2, h3, h4, h5, h6 {
         padding: 1.5rem 0;
     }
 
+    .hero-section .container {
+        padding: 1.25rem;
+    }
+
+    .hero-kicker {
+        font-size: 0.78rem;
+        margin-bottom: 0.65rem;
+    }
+
     .hero-section h2 {
         font-size: 1.3rem;
     }
 
     .hero-section h1 {
         font-size: 1.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-portrait-mobile {
+        margin-bottom: 1.25rem;
     }
 
     .hero-section p {
         font-size: 1rem;
-        padding: 0 1rem;
+        line-height: 1.65;
+        padding: 0;
+    }
+
+    .hero-highlights {
+        gap: 0.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .hero-highlights span {
+        border-radius: 8px;
+        flex: 1 1 100%;
+        justify-content: center;
     }
 
     .hero-image {
-        margin-bottom: 1.5rem;
+        height: 430px;
+        margin-bottom: 0;
+        object-position: 50% 24%;
     }
 
     .btn-lg {
