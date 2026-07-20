@@ -1,0 +1,7 @@
+[33m7036c20[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: pull origin main --rebase: Fast-forward
+[33mf53a796[m HEAD@{1}: commit: finish commit 2026
+[33me31f173[m HEAD@{2}: commit: finish commit
+[33m23ff8b7[m HEAD@{3}: commit: first commit
+[33m32f0a9e[m HEAD@{4}: commit: first commit
+[33m148b231[m HEAD@{5}: Branch: renamed refs/heads/master to refs/heads/main
+[33m148b231[m HEAD@{7}: commit (initial): first commit
